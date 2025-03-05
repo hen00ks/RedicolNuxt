@@ -6,5 +6,6 @@
     <home-Mission />
     <home-Services />
     <home-Products />
+    <home-Clients />
   </div>
 </template>
