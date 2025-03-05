@@ -16,7 +16,7 @@
       </p>
       <Button variant="outline" color="white">More About Us</Button>
     </div>
-    <img src="/images/logo-icon.png" alt="logo" class="w-72" />
+    <img src="/images/logo-icon.png" alt="logo" class="w-72 sm:block hidden" />
   </div>
 </template>
 <style scoped>
@@ -24,11 +24,12 @@
   transform-origin: bottom;
   animation: scale-up ease-in-out;
   animation-timeline: view();
-  animation-range: cover contain;
+  animation-range-end: contain;
+  animation-range-start: 10px;
 }
 @keyframes scale-up {
   from {
-    scale: 0.4;
+    scale: 0.6;
   }
   to {
     scale: 1;

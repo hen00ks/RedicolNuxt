@@ -5,5 +5,6 @@
     <home-About />
     <home-Mission />
     <home-Services />
+    <home-Products />
   </div>
 </template>

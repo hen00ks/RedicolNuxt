@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[90vh] bg-primary-dark flex flex-col items-center justify-around text-white"
+    class="py-24 px-4 bg-primary-dark flex flex-col items-center gap-24 text-white"
   >
     <div class="place-items-center">
       <h2 class="header max-w-6xl text-white mb-4">
@@ -14,14 +14,16 @@
     </div>
     <div>
       <h3 class="header text-primary-light w-fit pl-8 mb-4">
-        Why Work with Us?
+        Why Work with Us
       </h3>
-      <div class="flex gap-8">
+      <div class="flex flex-wrap justify-center gap-8">
         <div
           v-for="(item, i) in list"
           :key="i"
-          class="w-96 p-8 space-y-4 border-x-primary font-light place-items-center text-center"
-          :class="i == 1 && 'border-x-4'"
+          class="max-w-96 p-8 space-y-4 font-light place-items-center text-center"
+          :class="
+            i == 1 && 'border-y-4 border-primary sm:border-y-0 sm:border-x-4'
+          "
         >
           <h3 class="text-2xl font-text">
             {{ item.title }}
@@ -30,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="place-items-center space-y-4">
       <p>Explore more about our services</p>
       <Button variant="outline">Services</Button>
     </div>
