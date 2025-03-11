@@ -1,37 +1,51 @@
 <script setup></script>
 
 <template>
-  <div
-    class="max-w-4xl mx-auto flex items-center justify-center sm:justify-between gap-8 sm:gap-24 flex-wrap"
-  >
-    <div>
-      <h3 class="header text-primary w-fit mb-4">What We Offer</h3>
-      <img src="/images/coffee-beans.png" alt="" class="w-96" />
-    </div>
+  <div class="space-y-12">
+    <div
+      class="max-w-4xl mx-auto flex items-center justify-center sm:justify-between gap-8 sm:gap-24 flex-wrap"
+    >
+      <div>
+        <h3 class="header text-primary w-fit mb-4">What We Offer</h3>
+        <img src="/images/coffee-beans.png" alt="" class="w-96" />
+      </div>
 
-    <div class="max-w-96">
-      <h2 class="header text-start mb-8">From the farm To your table,</h2>
-      <p>
-        we offer a wide variety of fresh agricultural products to meet your
-        business needs
-      </p>
+      <div class="max-w-96">
+        <h2 class="header text-start mb-8">From the farm To your table,</h2>
+        <p>
+          we offer a wide variety of fresh agricultural products to meet your
+          business needs
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="flex flex-wrap justify-center gap-12">
-    <div class="w-fit">
-      <Circles class="top-circle scale-64" imageUrl="/images/crops.png" />
-      <h2 class="header text-stroke">Crops</h2>
+    <div class="flex flex-wrap justify-center gap-12">
+      <div class="w-fit">
+        <Circles
+          class="top-circle scale-64"
+          imageUrl="/images/crops.png"
+          bgColor="bg-yellow-200"
+        />
+        <h2 class="header text-stroke">Crops</h2>
+      </div>
+      <div class="w-fit">
+        <Circles
+          class="top-circle scale-64"
+          imageUrl="/images/fruits.png"
+          bgColor="bg-rose-400"
+        />
+        <h2 class="header text-stroke">Fruits</h2>
+      </div>
+      <div class="w-fit group">
+        <Circles
+          class="top-circle scale-64 group-hover:translate-y-6 transition-transform duration-1000"
+          imageUrl="/images/vegetables.png"
+        />
+        <h2 class="header text-stroke">Vegetables</h2>
+      </div>
     </div>
-    <div class="w-fit">
-      <Circles class="top-circle scale-64" imageUrl="/images/fruits.png" />
-      <h2 class="header text-stroke">Fruits</h2>
-    </div>
-    <div class="w-fit group">
-      <Circles
-        class="top-circle scale-64 group-hover:translate-y-6 transition-transform duration-1000"
-        imageUrl="/images/vegetables.png"
-      />
-      <h2 class="header text-stroke">Vegetables</h2>
+    <div class="place-items-center space-y-4">
+      <p>Explore more about our products</p>
+      <Button variant="outline">Products</Button>
     </div>
   </div>
 </template>

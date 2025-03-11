@@ -1,5 +1,5 @@
 <template>
   <layout-Header />
-  <NuxtPage :transition="true" />
+  <NuxtPage />
   <layout-Footer />
 </template>

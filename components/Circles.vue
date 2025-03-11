@@ -6,15 +6,16 @@
       <img :src="props.imageUrl" alt="" class="object-cover size-full" />
     </div>
     <div
-      class="bottom absolute -bottom-10 -right-10 -z-10 size-36 blur-xs bg-primary-dark rounded-full"
+      class="absolute -bottom-10 -right-10 -z-10 size-36 blur-xs bg-primary-dark rounded-full"
     />
     <div
       class="top absolute -top-10 -left-10 size-36 bg-primary-light rounded-full"
+      :class="bgColor"
     />
   </div>
 </template>
 <script setup lang="ts">
-const props = defineProps<{ imageUrl?: string }>();
+const props = defineProps<{ imageUrl?: string; bgColor?: string }>();
 </script>
 <style scoped>
 .top {
@@ -23,24 +24,22 @@ const props = defineProps<{ imageUrl?: string }>();
   animation-range-end: contain;
   animation-range-start: entry;
 }
-.bottom {
+/* .bottom {
+  scale: 2;
   transform-origin: bottom right;
-  animation: bottom-anim 1s ease-out;
+  animation: bottom-anim 1s ease-out forwards;
   animation-timeline: view();
   animation-range-end: contain;
   animation-range-start: entry;
-}
+} */
 @keyframes top-anim {
   from {
-    scale: 0.7;
+    scale: 0.5;
   }
 }
-@keyframes bottom-anim {
-  from {
-    scale: 2;
-  }
+/* @keyframes bottom-anim {
   to {
     scale: 1;
   }
-}
+} */
 </style>
