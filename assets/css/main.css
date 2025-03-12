@@ -8,7 +8,54 @@
   --color-primary-dark: hsl(183, 93%, 11%);
   --font-display: "Montserrat Alternates", serif;
   --font-text: "Montserrat", serif;
+  --animate-fade-in-out-y: fade-in-out-y 9s infinite;
+  --animate-color-change: color-change 9s infinite;
 }
+@keyframes fade-in-out-y {
+  6.6% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  73.3% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes color-change {
+  0% {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+  }
+  33.3% {
+    color: var(--color-rose-400);
+    background-color: var(--color-rose-200);
+  }
+  66.6% {
+    color: var(--color-amber-400);
+    background-color: var(--color-amber-100);
+  }
+  100% {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+  }
+}
+
 @utility header {
   font-weight: var(--font-weight-extrabold);
   color: var(--color-primary-dark);

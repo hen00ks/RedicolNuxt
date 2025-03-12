@@ -16,7 +16,7 @@ const isHomePage = computed(() => route.path === "/");
 </script>
 
 <template>
-  <div class="overflow-x-hidden">
+  <div class="overflow-x-hidden place-items-center">
     <svg
       width="1512"
       height="179"

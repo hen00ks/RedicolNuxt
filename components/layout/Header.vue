@@ -8,7 +8,7 @@ const routes = [
 </script>
 <template>
   <header
-    class="flex justify-between px-16 py-5 mb-16 border-b-2 border-primary-light"
+    class="flex justify-between px-16 py-2 mb-16 border-b-2 border-primary-light"
   >
     <div class="h-14">
       <img

@@ -19,17 +19,17 @@
       </div>
     </div>
     <div class="flex flex-wrap justify-center gap-12">
-      <div class="w-fit">
+      <div class="w-fit group">
         <Circles
-          class="top-circle scale-64"
+          class="top-circle scale-64 group-hover:-translate-y-6 transition-transform duration-800"
           imageUrl="/images/crops.png"
           bgColor="bg-yellow-200"
         />
         <h2 class="header text-stroke">Crops</h2>
       </div>
-      <div class="w-fit">
+      <div class="w-fit group">
         <Circles
-          class="top-circle scale-64"
+          class="top-circle scale-64 group-hover:-translate-y-6 transition-transform duration-800"
           imageUrl="/images/fruits.png"
           bgColor="bg-rose-400"
         />
@@ -37,7 +37,7 @@
       </div>
       <div class="w-fit group">
         <Circles
-          class="top-circle scale-64 group-hover:translate-y-6 transition-transform duration-1000"
+          class="top-circle scale-64 group-hover:-translate-y-6 transition-transform duration-800"
           imageUrl="/images/vegetables.png"
         />
         <h2 class="header text-stroke">Vegetables</h2>
