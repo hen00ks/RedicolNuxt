@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-20 flex flex-col items-center">
+  <div class="mb-20 flex flex-col items-center w-full p-4">
     <h2 class="text-3xl md:text-5xl font-semibold mb-8 text-custom-blue/75">
       Find Us Here
     </h2>

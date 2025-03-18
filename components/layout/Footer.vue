@@ -32,7 +32,7 @@ const isHomePage = computed(() => route.path === "/");
         stroke-linecap="round"
       />
     </svg>
-    <contact-Map v-if="isContactPage" />
+    <contactMap v-if="isContactPage" />
     <div v-else class="w-full py-10 text-gray-700">
       <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row gap-10">
         <div class="flex flex-col gap-8">

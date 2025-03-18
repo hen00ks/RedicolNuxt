@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-wrap gap-16 justify-around">
-    <div class="max-w-xl">
+  <div class="flex flex-wrap gap-16 justify-around items-center">
+    <div class="max-w-xl space-y-12">
       <div
         v-for="item in about ? list2 : list"
         class="py-4 space-y-4 not-last:border-b-2 border-b-primary-light"
@@ -12,11 +12,11 @@
           <Icon
             :name="item.icon"
             :size="about ? '100' : '64'"
-            class="text-primary size-fit"
+            class="text-primary"
           />
           <p
             class="italic text-primary-dark text-xl"
-            :class="about && 'not-italic whitespace-pre-line'"
+            :class="about && 'not-italic whitespace-pre-line !text-lg'"
           >
             {{ item.desc }}
           </p>
