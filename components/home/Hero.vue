@@ -1,22 +1,22 @@
 <template>
   <div class="flex flex-col gap-16">
     <div class="flex flex-col items-center text-center gap-4">
-      <h3 class="header text-xl text-primary">
-        Direct from Farmers, Delivered to You.
+      <h3 class="header text-xl text-yellow-600">
+        Direct from Farmers,<br class="sm:hidden" />
+        Delivered to You
       </h3>
       <h1 class="header">Freshness Without Compromise</h1>
       <p class="text-primary-dark max-w-3xl w-auto">
-        We connect local farmers to universities, hotels, and businesses by
-        delivering clean, high-quality agricultural products straight from the
-        source
+        Facilitating direct farm-to-business distribution, supplying fresh
+        agricultural products to companies, hotels, and institutions
       </p>
-      <div class="flex gap-12">
+      <div class="flex flex-wrap gap-4 sm:gap-12 justify-center">
         <Button>Explore our Services</Button>
         <Button variant="outline">Contact us Now</Button>
       </div>
     </div>
     <div class="relative flex flex-col items-center">
-      <div class="flex justify-between max-w-7xl w-full px-8 -mb-32">
+      <div class="flex justify-between max-w-7xl sm:w-full px-8 -mb-32">
         <div
           v-for="(elem, i) in dataSet"
           :class="
@@ -36,18 +36,13 @@
           </h5>
         </div>
       </div>
-      <div class="w-[min(180px,35vw)] -mb-28">
-        <img src="/images/geberie.png" alt="farmer image" class="w-full" />
+      <!-- gebere -->
+      <div class="-mb-28 z-10">
+        <NuxtImg width="150" src="/images/geberie.png" alt="farmer image" />
       </div>
-      <div class="overflow-x-hidden w-full place-content-center">
-        <!-- <img
-          src="/images/farm-land.svg"
-          alt="farm svg image"
-          class="w-[100vw] sm:w-[max(100%,2000px)]"
-        /> -->
-        <HomeFarmLand
-          class="w-[100vw] sm:w-[max(100%,2000px)] place-self-center"
-        />
+      <!-- svg -->
+      <div class="overflow-x-hidden w-full place-content-center z-20">
+        <HomeFarmLand class="w-[max(100%,2000px)] place-self-center" />
       </div>
     </div>
   </div>
@@ -91,7 +86,7 @@ onMounted(() => {
   setInterval(() => {
     index = (index + 1) % dataSets.length;
     dataSet.value = dataSets[index];
-  }, 3000);
+  }, 5000);
 });
 </script>
 <!-- <style scoped>

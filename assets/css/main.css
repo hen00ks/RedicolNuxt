@@ -8,13 +8,17 @@
   --color-primary-dark: hsl(183, 93%, 11%);
   --font-display: "Montserrat Alternates", serif;
   --font-text: "Montserrat", serif;
-  --animate-fade-in-out-y: fade-in-out-y 9s infinite;
-  --animate-color-change: color-change 9s infinite;
+  --animate-fade-in-out-y: fade-in-out-y 15s infinite;
+  --animate-color-change: color-change 15s infinite;
 }
 @keyframes fade-in-out-y {
   6.6% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
+  }
+  13.3% {
+    opacity: 1;
+    transform: translateY(0px);
   }
   33.3% {
     opacity: 1;
@@ -22,7 +26,11 @@
   }
   40% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
+  }
+  46.6% {
+    opacity: 1;
+    transform: translateY(0px);
   }
   66.6% {
     opacity: 1;
@@ -30,7 +38,11 @@
   }
   73.3% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0px);
   }
   100% {
     opacity: 1;

@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   nitro: {
     preset: "netlify",
   },
+  image: {
+    format: ["avif, webp"],
+  },
 
-  modules: ["@nuxt/icon"],
+  modules: ["@nuxt/icon", "@nuxt/image"],
 });

@@ -14,13 +14,10 @@ const props = withDefaults(
         ? `text-${color} bg-transparent border-2`
         : 'text-white bg-primary'
     "
-    class="relative sm:min-w-60 inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter rounded-md group"
+    class="relative min-w-60 inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter rounded-md group"
   >
     <span
-      :class="
-        props.variant === 'outline' ? 'bg-primary-light' : 'bg-primary-dark'
-      "
-      class="absolute size-0 transition-all duration-300 ease-out rounded-full group-hover:size-64"
+      class="absolute size-0 bg-primary-dark transition-all duration-300 ease-out rounded-full group-hover:size-64"
     ></span>
     <span class="absolute bottom-0 left-0 h-full -ml-2">
       <svg
