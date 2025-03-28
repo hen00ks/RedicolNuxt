@@ -2,7 +2,7 @@
   <div>
     <h1 class="text-5xl text-center font-extrabold">
       Expanding new business opportunities <br />
-      <span class="font-normal text-3xl">
+      <span class="font-normal text-2xl sm:text-3xl">
         while building meaningful connections worldwide
       </span>
     </h1>

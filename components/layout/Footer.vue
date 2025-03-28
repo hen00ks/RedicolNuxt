@@ -138,7 +138,7 @@ const isHomePage = computed(() => route.path === "/");
     <div class="place-self-center p-4">All rights reserved ©️2025 G.C</div>
     <div
       :class="isHomePage ? 'flex' : 'hidden'"
-      class="place-self-center p-4 pb-20 md:pb-4 gap-2 items-center w-full justify-center md:justify-start border-t-2 text-gray-800/50"
+      class="place-self-center p-4 pb-4 gap-2 items-center w-full justify-center md:justify-start border-t-2 text-gray-800/50"
     >
       <p class="text-xs">Designed and Developed by</p>
       <div class="font-semibold text-base">

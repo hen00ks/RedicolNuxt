@@ -1,11 +1,11 @@
 <template>
   <div
-    class="overflow-x-clip relative bg-[url('/images/crop-bg-removed.png')] bg-cover bg-bottom h-96 w-full flex items-center justify-around p-4"
+    class="overflow-x-clip relative bg-[url('/images/crop-bg-removed.png')] bg-black/30 bg-blend-darken bg-cover bg-bottom h-120 sm:h-96 w-full flex items-center justify-around p-4"
   >
-    <img
+    <NuxtImg
       src="/images/crop-bg-croped.png"
       alt=""
-      class="crop-image absolute bottom-0 sm:-left-0 -left-42 w-[90%] min-w-4xl"
+      class="crop-image absolute bottom-0 sm:-left-0 -left-[90%] w-[90%] min-w-4xl"
     />
     <div class="space-y-8 z-10">
       <p class="text-white max-w-2xl">
@@ -29,7 +29,7 @@
 }
 @keyframes scale-up {
   from {
-    scale: 0.6;
+    scale: 0.5;
   }
   to {
     scale: 1;

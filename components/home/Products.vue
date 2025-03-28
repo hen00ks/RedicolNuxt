@@ -1,17 +1,17 @@
 <script setup></script>
 
 <template>
-  <div class="space-y-12">
+  <div class="space-y-12 px-4">
     <div
       class="max-w-4xl mx-auto flex items-center justify-center sm:justify-between gap-8 sm:gap-24 flex-wrap"
     >
       <div>
         <h3 class="header text-primary w-fit mb-4">What We Offer</h3>
-        <img src="/images/coffee-beans.png" alt="" class="w-96" />
+        <img src="/images/vege.png" alt="vegetable" class="w-100" />
       </div>
 
-      <div class="max-w-96">
-        <h2 class="header text-start mb-8">From the farm To your table,</h2>
+      <div class="max-w-96 text-pretty text-center">
+        <h2 class="header sm:text-start mb-8">From the farm To your table,</h2>
         <p>
           we offer a wide variety of fresh agricultural products to meet your
           business needs
@@ -72,7 +72,7 @@
 
 @keyframes translate-up {
   from {
-    transform: translateY(500px);
+    transform: translateY(200px);
     scale: 0.5;
   }
   to {

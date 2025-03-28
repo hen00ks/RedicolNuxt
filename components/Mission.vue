@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-16 justify-around items-center">
+  <div class="flex flex-wrap gap-16 justify-around items-center px-2">
     <div class="max-w-xl space-y-12">
       <div
         v-for="item in about ? list2 : list"
@@ -15,7 +15,7 @@
             class="text-primary"
           />
           <p
-            class="italic text-primary-dark text-xl"
+            class="italic text-primary-dark sm:text-xl"
             :class="about && 'not-italic whitespace-pre-line !text-lg'"
           >
             {{ item.desc }}

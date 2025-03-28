@@ -15,7 +15,7 @@
         <Button variant="outline">Contact us Now</Button>
       </div>
     </div>
-    <div class="relative flex flex-col items-center">
+    <div class="relative flex flex-col items-center overflow-x-clip">
       <div class="flex justify-between max-w-7xl sm:w-full px-8 -mb-32">
         <div
           v-for="(elem, i) in dataSet"
@@ -41,7 +41,7 @@
         <NuxtImg width="150" src="/images/geberie.png" alt="farmer image" />
       </div>
       <!-- svg -->
-      <div class="overflow-x-hidden w-full place-content-center z-20">
+      <div class="overflow-x-clip w-full place-content-center z-20">
         <HomeFarmLand class="w-[max(100%,2000px)] place-self-center" />
       </div>
     </div>

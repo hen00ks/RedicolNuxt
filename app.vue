@@ -1,5 +1,5 @@
 <template>
   <layout-Header />
-  <NuxtPage class="overflow-x-hidden" />
+  <NuxtPage class="" />
   <layout-Footer />
 </template>
