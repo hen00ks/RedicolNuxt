@@ -25,16 +25,16 @@
     </div>
     <div class="place-items-center">
       <Circles
-        imageUrl="/images/coffee-beans.png"
+        imageUrl="/images/field.png"
         class="mb-8"
         :class="about ? 'block scale-75 origin-center' : 'hidden'"
       />
       <Circles
-        imageUrl="/images/coffee-beans.png"
+        imageUrl="/images/truck.png"
         class="mb-8"
         :class="about ? 'block scale-85 origin-center' : 'hidden'"
       />
-      <Circles imageUrl="/images/coffee-beans.png" class="mb-8" />
+      <Circles imageUrl="/images/store.png" class="mb-8" />
       <div :class="about && 'hidden'">
         <p>want to know more about us?</p>
         <Button variant="outline">Learn More</Button>
