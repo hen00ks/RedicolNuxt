@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center gap-20">
+  <div class="flex flex-col items-center gap-20 p-2">
     <div>
       <h2 class="header text-primary mb-8">REDICOL TRADING PLC</h2>
       <p class="max-w-5xl text-primary-dark">
@@ -14,22 +14,12 @@
         the marketplace.
       </p>
     </div>
-    <div class="flex justify-center space-x-8">
-      <img
-        src="/images/coffee-beans.png"
-        alt="image"
-        class="size-60 object-cover rounded-full"
-      />
-      <img
-        src="/images/coffee-beans.png"
-        alt="image"
-        class="h-64 aspect-video object-cover"
-      />
-      <img
-        src="/images/coffee-beans.png"
-        alt="image"
-        class="size-60 object-cover rounded-full"
-      />
+    <div>
+      <NuxtImg height="300" src="/images/office.png" alt="image" />
+      <h3 class="mt-2 header text-primary w-fit place-self-center text-2xl">
+        Asfaw T.
+      </h3>
+      <p class="place-self-center">CEO</p>
     </div>
   </div>
 </template>
