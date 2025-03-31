@@ -11,7 +11,7 @@ const { phone, phone2, email, tapuWebsite, abicolWebsite } = useCompanyInfo();
       >
         <h3 class="header text-2xl text-nowrap">Tapu Foods</h3>
         <img
-          class="size-64 object-cover rounded-t-3xl rounded-br-3xl"
+          class="size-64 object-cover rounded-t-3xl rounded-br-3xl shadow-2xl"
           src="/images/tapu-logo.png"
         />
         <div class="w-full text-primary text-center font-bold text-nowrap">
@@ -31,10 +31,12 @@ const { phone, phone2, email, tapuWebsite, abicolWebsite } = useCompanyInfo();
         class="w-64 px-4 box-content flex-col justify-center items-center gap-7 flex"
       >
         <h3 class="header text-2xl text-nowrap">Abicol Import Export Plc</h3>
-        <img
-          class="size-64 object-contain rounded-t-3xl rounded-br-3xl scale-60"
-          src="/images/abicol-logo.png"
-        />
+        <div class="size-64 shadow-2xl rounded-t-3xl rounded-br-3xl">
+          <img
+            class="size-64 object-contain scale-60"
+            src="/images/abicol-logo.png"
+          />
+        </div>
         <div class="text-primary text-center font-bold text-nowrap">
           Our agricultural products exporter
         </div>
