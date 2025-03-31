@@ -14,7 +14,7 @@ const props = withDefaults(
         ? `text-${color} bg-transparent border-2`
         : 'text-white bg-primary'
     "
-    class="relative min-w-60 inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter rounded-md group"
+    class="cursor-pointer relative min-w-60 inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter rounded-md group"
   >
     <span
       class="absolute size-0 bg-primary-dark transition-all duration-300 ease-out rounded-full group-hover:size-64"

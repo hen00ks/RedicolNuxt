@@ -34,7 +34,9 @@
     </div>
     <div class="place-items-center space-y-4">
       <p>Explore more about our services</p>
-      <Button variant="outline">Services</Button>
+      <NuxtLink to="/products"
+        ><Button variant="outline">Services</Button></NuxtLink
+      >
     </div>
   </div>
 </template>

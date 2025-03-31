@@ -11,8 +11,12 @@
         agricultural products to companies, hotels, and institutions
       </p>
       <div class="flex flex-wrap gap-4 sm:gap-12 justify-center">
-        <Button>Explore our Services</Button>
-        <Button variant="outline">Contact us Now</Button>
+        <NuxtLink to="/products"
+          ><Button>Explore our Products</Button></NuxtLink
+        >
+        <NuxtLink to="/contact">
+          <Button variant="outline">Contact us Now</Button></NuxtLink
+        >
       </div>
     </div>
     <div class="relative flex flex-col items-center overflow-x-clip">
@@ -28,7 +32,11 @@
           "
           class="animate-fade-in-out-y size-20 flex flex-col items-center justify-center"
         >
-          <img :src="elem.imgUrl" alt="image" />
+          <img
+            :src="elem.imgUrl"
+            alt="image"
+            class="size-12 object-cover rounded-full"
+          />
           <h5
             class="animate-color-change text-primary bg-primary-light font-semibold text-sm py-1 px-3 rounded-full"
           >
@@ -49,30 +57,30 @@
 </template>
 <script setup>
 const fruits = [
-  { imgUrl: "/images/apple.png", text: "Sustainability" },
+  { imgUrl: "/images/mango.png", text: "Sustainability" },
   { imgUrl: "/images/apple.png", text: "Innovation" },
-  { imgUrl: "/images/apple.png", text: "Nature" },
-  { imgUrl: "/images/apple.png", text: "Energy" },
-  { imgUrl: "/images/apple.png", text: "Eco" },
-  { imgUrl: "/images/apple.png", text: "Purity" },
+  { imgUrl: "/images/banana.png", text: "Nature" },
+  { imgUrl: "/images/wine.png", text: "Energy" },
+  { imgUrl: "/images/watermelon.png", text: "Eco" },
+  { imgUrl: "/images/pineapple.png", text: "Purity" },
 ];
 
 const crops = [
-  { imgUrl: "/images/wheat.png", text: "Growth" },
-  { imgUrl: "/images/wheat.png", text: "Balance" },
+  { imgUrl: "/images/boloqe.png", text: "Growth" },
+  { imgUrl: "/images/corn.png", text: "Balance" },
   { imgUrl: "/images/wheat.png", text: "Organic" },
-  { imgUrl: "/images/wheat.png", text: "Breeze" },
-  { imgUrl: "/images/wheat.png", text: "Harmony" },
-  { imgUrl: "/images/wheat.png", text: "Refresh" },
+  { imgUrl: "/images/rice.png", text: "Breeze" },
+  { imgUrl: "/images/beans.png", text: "Harmony" },
+  { imgUrl: "/images/lentils.png", text: "Refresh" },
 ];
 
 const vegetables = [
-  { imgUrl: "/images/spinach.png", text: "Future" },
-  { imgUrl: "/images/spinach.png", text: "Bright" },
-  { imgUrl: "/images/spinach.png", text: "Green" },
+  { imgUrl: "/images/garlic.png", text: "Future" },
+  { imgUrl: "/images/tomato.png", text: "Bright" },
+  { imgUrl: "/images/broccoli.png", text: "Green" },
   { imgUrl: "/images/spinach.png", text: "Flow" },
-  { imgUrl: "/images/spinach.png", text: "Light" },
-  { imgUrl: "/images/spinach.png", text: "Clean" },
+  { imgUrl: "/images/cucumber.png", text: "Light" },
+  { imgUrl: "/images/fosolia.png", text: "Clean" },
 ];
 
 const dataSet = ref(vegetables);

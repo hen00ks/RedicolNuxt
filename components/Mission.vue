@@ -37,7 +37,9 @@
       <Circles imageUrl="/images/store.png" class="mb-8" />
       <div :class="about && 'hidden'">
         <p>want to know more about us?</p>
-        <Button variant="outline">Learn More</Button>
+        <NuxtLink to="/about"
+          ><Button variant="outline">Learn More</Button></NuxtLink
+        >
       </div>
     </div>
   </div>

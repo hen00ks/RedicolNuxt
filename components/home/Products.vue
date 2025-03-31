@@ -45,7 +45,7 @@
     </div>
     <div class="place-items-center space-y-4">
       <p>Explore more about our products</p>
-      <Button variant="outline">Products</Button>
+      <NuxtLink to="/products"><Button>Products</Button></NuxtLink>
     </div>
   </div>
 </template>

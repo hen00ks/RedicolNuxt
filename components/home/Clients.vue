@@ -13,8 +13,8 @@
         class="animate-slide-left-infinite group-hover:animation-pause inline-flex w-max gap-24 px-12"
       >
         <img
-          class="mx-4 inline h-16 opacity-75"
-          src="/images/abicol-logo.png"
+          class="mx-4 inline h-16 opacity-75 scale-200"
+          src="/images/redicol-logo.png"
           alt="tapu-foods"
         />
         <img
@@ -28,8 +28,8 @@
           alt="tapu-foods"
         />
         <img
-          class="mx-4 inline h-16 opacity-75"
-          src="/images/abicol-logo.png"
+          class="mx-4 inline h-16 opacity-75 scale-200"
+          src="/images/redicol-logo.png"
           alt="tapu-foods"
         />
         <img
@@ -48,8 +48,8 @@
         class="animate-slide-left-infinite group-hover:animation-pause inline-flex w-max gap-24 px-12"
       >
         <img
-          class="mx-4 inline h-16 opacity-75"
-          src="/images/abicol-logo.png"
+          class="mx-4 inline h-16 opacity-75 scale-200"
+          src="/images/redicol-logo.png"
           alt="Transistor"
         />
         <img
@@ -63,8 +63,8 @@
           alt="tapu-foods"
         />
         <img
-          class="mx-4 inline h-16 opacity-75"
-          src="/images/abicol-logo.png"
+          class="mx-4 inline h-16 opacity-75 scale-200"
+          src="/images/redicol-logo.png"
           alt="tapu-foods"
         />
         <img

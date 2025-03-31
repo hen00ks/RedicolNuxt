@@ -32,11 +32,11 @@ const { phone, phone2, email, tapuWebsite, abicolWebsite } = useCompanyInfo();
       >
         <h3 class="header text-2xl text-nowrap">Abicol Import Export Plc</h3>
         <img
-          class="size-64 object-cover rounded-t-3xl rounded-br-3xl"
-          src="/images/redicol-logo.png"
+          class="size-64 object-contain rounded-t-3xl rounded-br-3xl scale-60"
+          src="/images/abicol-logo.png"
         />
         <div class="text-primary text-center font-bold text-nowrap">
-          Our agricultural products supplier
+          Our agricultural products exporter
         </div>
         <div class="text-custom-orange">
           <HoverLink
