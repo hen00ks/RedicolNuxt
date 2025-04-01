@@ -9,7 +9,8 @@ import {
 } from "#components";
 
 const route = useRoute();
-const { phone, phone2, email, tapuWebsite, abicolWebsite } = useCompanyInfo();
+const { phone, phone2, email, instagram, tiktok, tapuWebsite, abicolWebsite } =
+  useCompanyInfo();
 
 const isContactPage = computed(() => route.path === "/contact");
 const isHomePage = computed(() => route.path === "/");
@@ -42,7 +43,7 @@ const isHomePage = computed(() => route.path === "/");
             alt="Logo"
           />
           <div class="flex flex-col gap-4 text-primary-dark font-medium">
-            <div class="flex justify-between w-full">
+            <div class="flex justify-between w-full gap-4">
               <span>{{ phone }}</span>
               <span>{{ phone2 }}</span>
             </div>
@@ -85,7 +86,7 @@ const isHomePage = computed(() => route.path === "/");
                   },
                   {
                     title: 'Instagram',
-                    link: 'https://www.instagram.com/abicolplc/',
+                    link: instagram,
                     icon: IconsInstagram,
                   },
                   {

@@ -4,36 +4,36 @@ const props = defineProps({
 });
 
 const fruits = [
-  { src: "/images/peach.png", name: "Peach" },
-  { src: "/images/banana.png", name: "Banana" },
-  { src: "/images/mango.png", name: "Mango" },
-  { src: "/images/pineapple.png", name: "Pineapple" },
-  { src: "/images/watermelon.png", name: "Watermelon" },
-  { src: "/images/avocado.png", name: "Avocado" },
-  { src: "/images/wine.png", name: "Wine" },
-  { src: "/images/fruits.png", name: "Mixed Fruits" },
+  { src: "/images/peach.png", name: "ፖም" },
+  { src: "/images/banana.png", name: "ሙዝ" },
+  { src: "/images/mango.png", name: "ማንጎ" },
+  { src: "/images/lemon.png", name: "ሎሚ" },
+  { src: "/images/watermelon.png", name: "ሀብሀብ" },
+  { src: "/images/strawberry.png", name: "እንጆሪ" },
+  { src: "/images/wine.png", name: "የወይን ፍሬ" },
+  { src: "/images/orange.png", name: "ብርቱካን" },
 ];
 
 const crops = [
-  { src: "/images/wheat.png", name: "Wheat" },
-  { src: "/images/rice.png", name: "Rice" },
-  { src: "/images/corn.png", name: "Corn" },
-  { src: "/images/beans.png", name: "Beans" },
-  { src: "/images/lentils.png", name: "Lentils" },
-  { src: "/images/coffee-beans.png", name: "Coffee Beans" },
-  { src: "/images/crops.png", name: "Mixed Crops" },
-  { src: "/images/fosolia.png", name: "Fosolia" },
+  { src: "/images/crop.png", name: "ስንዴ" },
+  { src: "/images/ricee.png", name: "ሩዝ" },
+  { src: "/images/corn.png", name: "በቆሎ" },
+  { src: "/images/beans.png", name: "ባቄላ" },
+  { src: "/images/lentils.png", name: "ምስር" },
+  { src: "/images/teff.png", name: "ጤፍ" },
+  { src: "/images/pea.png", name: "አተር" },
+  { src: "/images/fosolia.png", name: "ፎሶሊያ" },
 ];
 
 const vegetables = [
-  { src: "/images/tomato.png", name: "Tomato" },
-  { src: "/images/onion.png", name: "Onion" },
-  { src: "/images/garlic.png", name: "Garlic" },
-  { src: "/images/cabbage.png", name: "Cabbage" },
-  { src: "/images/broccoli.png", name: "Broccoli" },
-  { src: "/images/cucumber.png", name: "Cucumber" },
-  { src: "/images/pumpkin.png", name: "Pumpkin" },
-  { src: "/images/spinach.png", name: "Spinach" },
+  { src: "/images/tomato.png", name: "ቲማቲም" },
+  { src: "/images/onion.png", name: "ሽንኩርት" },
+  { src: "/images/garlic.png", name: "ነጭ ሽንኩርት" },
+  { src: "/images/cabbage.png", name: "ጥቅል ጎመን" },
+  { src: "/images/broccoli.png", name: "የአበባ ጎመን" },
+  { src: "/images/cucumber.png", name: "ኪያር" },
+  { src: "/images/pumpkin.png", name: "ዱባ" },
+  { src: "/images/green.png", name: "ጎመን" },
 ];
 
 const images = ref(crops);

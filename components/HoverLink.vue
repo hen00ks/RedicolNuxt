@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    :target="isExternal && '_blank'"
+    :target="isExternal ? '_blank' : ''"
     class="relative group flex items-center gap-2"
   >
     <span class="group-hover:text-primary-dark flex-1">{{ title }}</span>

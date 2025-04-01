@@ -41,7 +41,9 @@ const timelineItems = [
   <div class="space-y-40">
     <AboutHistory />
     <Mission :about="true" />
+    <AboutCoreValues />
     <Processes :timelineItems title="Our Story" />
     <AboutSisters />
+    <AboutFaq />
   </div>
 </template>
