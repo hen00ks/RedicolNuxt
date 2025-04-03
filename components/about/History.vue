@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center gap-20 p-2">
+  <div class="flex flex-col items-center gap-20 p-3">
     <div>
       <h2 class="header text-primary mb-8">REDICOL TRADING PLC</h2>
       <p class="max-w-5xl text-primary-dark">
@@ -15,9 +15,14 @@
       </p>
     </div>
     <div>
-      <NuxtImg height="300" src="/images/office.png" alt="image" />
+      <NuxtImg
+        height="400"
+        src="/images/ceo.png"
+        alt="ceo of redicol trading plc"
+        class="w-[90dvw] max-w-96 rounded-2xl"
+      />
       <h3 class="mt-2 header text-primary w-fit place-self-center text-2xl">
-        Asfaw T.
+        mr. Markos Tadese
       </h3>
       <p class="place-self-center">CEO</p>
     </div>

@@ -1,40 +1,41 @@
 <script setup>
 const currentTab = ref("fruits");
-const timelineItems = [
+
+const processSteps = [
   {
-    title: "Company Founded",
+    title: "Initial Consultation",
     description:
-      "Our journey began with a vision to transform the industry through innovative solutions and cutting-edge technology.",
-    date: "January 2020",
-    image: "/images/coffee-beans.png",
+      "Schedule a meeting with our team to discuss your agricultural needs, product requirements, and business goals.",
+    date: "Step 1",
+    image: "/images/office.png",
   },
   {
-    title: "First Major Client",
+    title: "Product Selection",
     description:
-      "Secured our first enterprise partnership, validating our approach and opening doors to new opportunities.",
-    date: "March 2020",
-    image: "/images/coffee-beans.png",
+      "Browse our extensive catalog of fruits, vegetables, and crops. Our experts will help you select the best products for your market.",
+    date: "Step 2",
+    image: "/images/fruits.png",
   },
   {
-    title: "International Expansion",
+    title: "Quality Inspection",
     description:
-      "Established our global presence with new offices in London, Tokyo, and Singapore to better serve our international clients.",
-    date: "June 2021",
-    image: "/images/coffee-beans.png",
+      "Visit our facilities to inspect product quality or request sample shipments to ensure our products meet your standards.",
+    date: "Step 3",
+    image: "/images/field.png",
   },
   {
-    title: "Product Launch",
+    title: "Contract Agreement",
     description:
-      "Unveiled our flagship platform after months of development, receiving overwhelming positive feedback from the market.",
-    date: "September 2022",
-    image: "/images/coffee-beans.png",
+      "Finalize terms, pricing, delivery schedules, and payment methods with our business team to establish a clear partnership framework.",
+    date: "Step 4",
+    image: "/images/store.png",
   },
   {
-    title: "Industry Recognition",
+    title: "Delivery & Ongoing Support",
     description:
-      "Honored with the prestigious Innovation Award, recognizing our commitment to excellence and forward-thinking solutions.",
-    date: "December 2023",
-    image: "/images/coffee-beans.png",
+      "Receive your products on schedule with our reliable logistics network, and enjoy continuous support from our dedicated customer service team.",
+    date: "Step 5",
+    image: "/images/truck.png",
   },
 ];
 </script>
@@ -46,6 +47,6 @@ const timelineItems = [
       <ProductsTab :currentTab @changeTab="(tab) => (currentTab = tab)" />
       <ProductsImages :header="currentTab" />
     </div>
-    <Processes :timelineItems title="Processes and Steps" />
+    <Processes :timelineItems="processSteps" title="How to Work With Us" />
   </div>
 </template>

@@ -9,10 +9,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   nitro: {
-    preset: "netlify",
-  },
-  image: {
-    format: ["avif, webp"],
+    preset: "node-server",
   },
 
   modules: ["@nuxt/icon", "@nuxt/image"],

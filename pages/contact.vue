@@ -1,3 +1,117 @@
+<script setup>
+import emailjs from "@emailjs/browser";
+import {
+  IconsFacebook,
+  IconsInstagram,
+  IconsLink,
+  IconsTiktok,
+  IconsTelegram,
+  IconsWhatsapp,
+} from "#components";
+const {
+  phone,
+  phone2,
+  email,
+  instagram,
+  tiktok,
+  telegram,
+  facebook,
+  tapuWebsite,
+  abicolWebsite,
+} = useCompanyInfo();
+const form = reactive({
+  firstName: "",
+  lastName: "",
+  email: "",
+  subject: "",
+  message: "",
+});
+
+const errors = reactive({
+  firstName: "",
+  lastName: "",
+  email: "",
+  subject: "",
+  message: "",
+});
+
+const isSubmitting = ref(false);
+const formSubmitted = ref(false);
+
+const validateForm = () => {
+  let isValid = true;
+
+  // Reset errors
+  Object.keys(errors).forEach((key) => {
+    errors[key] = "";
+  });
+
+  if (!form.firstName.trim()) {
+    errors.firstName = "First name is required";
+    isValid = false;
+  }
+
+  if (!form.lastName.trim()) {
+    errors.lastName = "Last name is required";
+    isValid = false;
+  }
+
+  if (!form.email.trim()) {
+    errors.email = "Email is required";
+    isValid = false;
+  } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
+    errors.email = "Please enter a valid email address";
+    isValid = false;
+  }
+
+  if (!form.subject) {
+    errors.subject = "Please select a subject";
+    isValid = false;
+  }
+
+  if (!form.message.trim()) {
+    errors.message = "Message is required";
+    isValid = false;
+  } else if (form.message.length < 10) {
+    errors.message = "Message must be at least 10 characters";
+    isValid = false;
+  }
+
+  return isValid;
+};
+
+const submitForm = async (e) => {
+  if (!validateForm()) return;
+  console.log(e);
+  isSubmitting.value = true;
+
+  try {
+    emailjs.sendForm("service_rhmus37", "template_hwfl82v", e.target, {
+      publicKey: "atB7pqTOI40Gfvbn3",
+    });
+
+    // Reset form after successful submission
+    Object.keys(form).forEach((key) => {
+      if (key === "privacy") {
+        form[key] = false;
+      } else {
+        form[key] = "";
+      }
+    });
+
+    formSubmitted.value = true;
+
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      formSubmitted.value = false;
+    }, 5000);
+  } catch (error) {
+    alert("Error submitting form: Try again!");
+  } finally {
+    isSubmitting.value = false;
+  }
+};
+</script>
 <template>
   <div class="flex items-center justify-center p-4">
     <div
@@ -104,94 +218,30 @@
 
           <div class="mt-12">
             <h3 class="font-semibold text-gray-700 mb-4">Connect with us</h3>
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 text-primary">
               <a
-                href="#"
+                :href="telegram"
                 class="bg-white p-3 rounded-full border border-gray-200 hover:border-primary transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-primary"
-                >
-                  <path
-                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                  ></path>
-                </svg>
+                <IconsTelegram />
               </a>
               <a
-                href="#"
+                :href="facebook"
                 class="bg-white p-3 rounded-full border border-gray-200 hover:border-primary transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-primary"
-                >
-                  <path
-                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-                  ></path>
-                </svg>
+                <IconsFacebook />
               </a>
               <a
-                href="#"
+                :href="instagram"
                 class="bg-white p-3 rounded-full border border-gray-200 hover:border-primary transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-primary"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path
-                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                  ></path>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                </svg>
+                <IconsInstagram />
               </a>
               <a
-                href="#"
+                :href="tiktok"
                 class="bg-white p-3 rounded-full border border-gray-200 hover:border-primary transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-primary"
-                >
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  ></path>
-                  <rect width="4" height="12" x="2" y="9"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
+                <IconsTiktok />
               </a>
             </div>
           </div>
@@ -217,6 +267,7 @@
                   <input
                     type="text"
                     id="firstName"
+                    name="firstName"
                     v-model="form.firstName"
                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-primary outline-none transition-colors"
                     :class="{ 'border-red-300': errors.firstName }"
@@ -237,6 +288,7 @@
                   <input
                     type="text"
                     id="lastName"
+                    name="lastName"
                     v-model="form.lastName"
                     class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-primary outline-none transition-colors"
                     :class="{ 'border-red-300': errors.lastName }"
@@ -258,6 +310,7 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   v-model="form.email"
                   class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-primary outline-none transition-colors"
                   :class="{ 'border-red-300': errors.email }"
@@ -277,6 +330,7 @@
               <div class="relative">
                 <select
                   id="subject"
+                  name="subject"
                   v-model="form.subject"
                   class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-primary outline-none transition-colors appearance-none"
                   :class="{ 'border-red-300': errors.subject }"
@@ -320,6 +374,7 @@
               <div class="relative">
                 <textarea
                   id="message"
+                  name="message"
                   v-model="form.message"
                   rows="4"
                   class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-primary outline-none transition-colors resize-none"
@@ -370,108 +425,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const { phone, email } = useCompanyInfo();
-const form = reactive({
-  firstName: "",
-  lastName: "",
-  email: "",
-  subject: "",
-  message: "",
-  privacy: false,
-});
-
-const errors = reactive({
-  firstName: "",
-  lastName: "",
-  email: "",
-  subject: "",
-  message: "",
-  privacy: "",
-});
-
-const isSubmitting = ref(false);
-const formSubmitted = ref(false);
-
-const validateForm = () => {
-  let isValid = true;
-
-  // Reset errors
-  Object.keys(errors).forEach((key) => {
-    errors[key] = "";
-  });
-
-  if (!form.firstName.trim()) {
-    errors.firstName = "First name is required";
-    isValid = false;
-  }
-
-  if (!form.lastName.trim()) {
-    errors.lastName = "Last name is required";
-    isValid = false;
-  }
-
-  if (!form.email.trim()) {
-    errors.email = "Email is required";
-    isValid = false;
-  } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
-    errors.email = "Please enter a valid email address";
-    isValid = false;
-  }
-
-  if (!form.subject) {
-    errors.subject = "Please select a subject";
-    isValid = false;
-  }
-
-  if (!form.message.trim()) {
-    errors.message = "Message is required";
-    isValid = false;
-  } else if (form.message.length < 10) {
-    errors.message = "Message must be at least 10 characters";
-    isValid = false;
-  }
-
-  if (!form.privacy) {
-    errors.privacy = "You must agree to the privacy policy";
-    isValid = false;
-  }
-
-  return isValid;
-};
-
-const submitForm = async () => {
-  if (!validateForm()) return;
-
-  isSubmitting.value = true;
-
-  try {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    // Reset form after successful submission
-    Object.keys(form).forEach((key) => {
-      if (key === "privacy") {
-        form[key] = false;
-      } else {
-        form[key] = "";
-      }
-    });
-
-    formSubmitted.value = true;
-
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      formSubmitted.value = false;
-    }, 5000);
-  } catch (error) {
-    console.error("Error submitting form:", error);
-  } finally {
-    isSubmitting.value = false;
-  }
-};
-</script>
 
 <style scoped>
 /* Optional: Add custom styles here if needed */

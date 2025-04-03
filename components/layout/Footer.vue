@@ -3,14 +3,23 @@ import {
   IconsFacebook,
   IconsInstagram,
   IconsLink,
-  IconsLinkedin,
+  IconsTiktok,
   IconsTelegram,
   IconsWhatsapp,
 } from "#components";
 
 const route = useRoute();
-const { phone, phone2, email, instagram, tiktok, tapuWebsite, abicolWebsite } =
-  useCompanyInfo();
+const {
+  phone,
+  phone2,
+  email,
+  instagram,
+  tiktok,
+  telegram,
+  facebook,
+  tapuWebsite,
+  abicolWebsite,
+} = useCompanyInfo();
 
 const isContactPage = computed(() => route.path === "/contact");
 const isHomePage = computed(() => route.path === "/");
@@ -76,13 +85,13 @@ const isHomePage = computed(() => route.path === "/");
                 v-for="social in [
                   {
                     title: 'Telegram',
-                    link: 'https://t.me/ABICOLImportExport',
+                    link: telegram,
                     icon: IconsTelegram,
                   },
                   {
-                    title: 'LinkedIn',
-                    link: 'https://www.linkedin.com/company/abicol-import-export-plc/',
-                    icon: IconsLinkedin,
+                    title: 'Tiktok',
+                    link: tiktok,
+                    icon: IconsTiktok,
                   },
                   {
                     title: 'Instagram',
@@ -91,12 +100,12 @@ const isHomePage = computed(() => route.path === "/");
                   },
                   {
                     title: 'Facebook',
-                    link: 'https://www.facebook.com/profile.php?id=61571417447207',
+                    link: facebook,
                     icon: IconsFacebook,
                   },
                   {
                     title: 'WhatsApp',
-                    link: 'https://api.whatsapp.com/send/?phone=%2B251947343333',
+                    link: 'https://api.whatsapp.com/send/?phone=%2B251963011116',
                     icon: IconsWhatsapp,
                   },
                 ]"
